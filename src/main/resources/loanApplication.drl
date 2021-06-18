@@ -1,0 +1,8 @@
+import com.springhow.examples.drools.LoanApplication
+
+rule "Infer Adult"
+when
+  $p : LoanApplication(age >= 18)
+then
+  $p.setApproved(true);
+end
